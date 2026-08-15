@@ -35,3 +35,5 @@ __pycache__
 # other
 my_env.sh
 ide_my_env.sh
+scripts
+ws_tools
