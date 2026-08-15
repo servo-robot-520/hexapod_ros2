@@ -167,6 +167,8 @@ colcon_add_subdirectories(
         hexapod_interface
         servo_robot_board_interface
         servo_robot_board_bridge
+        common_cpp
         hexapod_controller
+        ubtech_servo_ros2_control
 #         ydlidar_ros2_driver
 )

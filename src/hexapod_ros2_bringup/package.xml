@@ -5,7 +5,7 @@
     <name>hexapod_ros2_bringup</name>
     <version>0.1.0</version>
     <description>Integration launch files and configs for the hexapod</description>
-    <maintainer email="ohmdmbct@gmail.com">zwh</maintainer>
+    <maintainer email="ohmdmbct@gmail.com">greenhand520</maintainer>
     <license>GPL-3.0</license>
 
     <exec_depend>camera_node</exec_depend>
