@@ -163,7 +163,10 @@ set(ROS2_WS_SOURCE_BUILD ON)
 colcon_add_subdirectories(
         BUILD_BASE "${CMAKE_BINARY_DIR}/colcon_packages"
         BASE_PATHS "${PROJECT_SOURCE_DIR}/src/"
-        # --packages-select
-        # servo_robot_board_interface
-        # ydlidar_ros2_driver
+        --packages-select
+        hexapod_interface
+        servo_robot_board_interface
+        servo_robot_board_bridge
+        hexapod_controller
+#         ydlidar_ros2_driver
 )

@@ -17,6 +17,7 @@ src/common_cpp
 src/servo_robot_board_bridge
 src/servo_robot_board_interface
 src/ydlidar_ros2_driver
+src/ubtech_servo_ros2_control
 
 # log
 logs

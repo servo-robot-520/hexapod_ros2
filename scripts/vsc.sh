@@ -10,10 +10,6 @@ source "$SCRIPT_DIR/scripts/_common.sh"
 MODULE_CLONE_FLAG=false
 ADD_SAFE_FLAG=false
 CLONE_JOBS=4
-GIT_USER=""
-GIT_PASS=""
-TMP_ASKPASS=""
-CREDENTIALS_READY=false
 
 usage() {
     echo "Usage: ws_tools vsc [-module_clone|-mc [-j N]] [-safe] [-h]"
@@ -208,12 +204,6 @@ vsc_module_clone() {
         return 1
     }
 
-    # 提前设置凭证（并行 clone 时无法交互输入）
-    if ! setup_credentials; then
-        echo "Error: unable to configure Git credentials"
-        return 1
-    fi
-
     # 创建临时目录存放每个模块的结果
     RESULT_DIR=$(mktemp -d)
     trap "rm -rf '$RESULT_DIR'" EXIT
@@ -373,7 +363,5 @@ if [[ "$MODULE_CLONE_FLAG" == false && "$ADD_SAFE_FLAG" == false ]]; then
     exit 1
 fi
 
-cleanup_credentials
-trap - EXIT INT TERM
 echo "Done."
 exit "$status"
