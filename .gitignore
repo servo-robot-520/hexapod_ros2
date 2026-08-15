@@ -10,8 +10,13 @@ CMakeFiles
 build
 log
 install
-src
 .ws_tools_build.lock
+
+# packages
+src/common_cpp
+src/servo_robot_board_bridge
+src/servo_robot_board_interface
+src/ydlidar_ros2_driver
 
 # log
 logs
