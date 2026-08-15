@@ -1,0 +1,31 @@
+.idea
+**.source.upload.marker
+
+# CMake
+cmake-build-*/
+symlink_install_manifest.txt
+CMakeFiles
+
+# ros2
+build
+log
+install
+src
+.ws_tools_build.lock
+
+# log
+logs
+
+# python
+.venv
+venv
+*.egg-info
+.env
+*.fuse_**
+.cache
+__pycache__
+
+
+# other
+my_env.sh
+ide_my_env.sh
