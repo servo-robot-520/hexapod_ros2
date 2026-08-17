@@ -1,15 +1,11 @@
 cmake_minimum_required(VERSION 3.14)
-set(PROJECT_VERSION 1.0.0)
+set(PROJECT_VERSION 0.1.0)
 project("hexapod_ros2")
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     add_compile_options(-Wall -Wextra -Wpedantic)
-endif ()
-
-if (DEFINED ENV{CLION_IDE})
-    message(STATUS "CLion env detected")
 endif ()
 
 function(require_cxx23_stdlib)
@@ -45,7 +41,7 @@ function(require_cxx23_stdlib)
                     OUTPUT_VARIABLE _gcc_ver OUTPUT_STRIP_TRAILING_WHITESPACE)
             message(FATAL_ERROR
                     "\n===========================================\n"
-                    "  \"${PROJECT_NAME}\" requires C++23 stdlib support\n"
+                    "  \"hexapod_ros2\" requires C++23 stdlib support\n"
                     "  (<expected>, <format>, <ranges>)\n"
                     "-------------------------------------------\n"
                     "  Detected : GCC ${_gcc_ver}\n"
@@ -64,7 +60,7 @@ function(require_cxx23_stdlib)
         elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
             message(FATAL_ERROR
                     "\n===========================================\n"
-                    "  \"${PROJECT_NAME}\" requires C++23 stdlib support\n"
+                    "  \"hexapod_ros2\" requires C++23 stdlib support\n"
                     "  (<expected>, <format>, <ranges>)\n"
                     "-------------------------------------------\n"
                     "  Use Clang 17+ with libc++:\n"
@@ -74,7 +70,7 @@ function(require_cxx23_stdlib)
         else ()
             message(FATAL_ERROR
                     "\n===========================================\n"
-                    "  \"${PROJECT_NAME}\" requires C++23 stdlib support\n"
+                    "  \"hexapod_ros2\" requires C++23 stdlib support\n"
                     "  (<expected>, <format>, <ranges>)\n"
                     "-------------------------------------------\n"
                     "  Current compiler: ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}\n"
@@ -83,7 +79,7 @@ function(require_cxx23_stdlib)
         endif ()
     endif ()
 
-    message(STATUS "${PROJECT_NAME}: C++23 stdlib support confirmed")
+    message(STATUS "hexapod_ros2: C++23 stdlib support confirmed")
 endfunction()
 
 function(colcon_add_subdirectories)

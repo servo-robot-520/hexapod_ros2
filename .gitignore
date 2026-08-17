@@ -34,6 +34,6 @@ __pycache__
 
 # other
 my_env.sh
-ide_my_env.sh
-scripts
-ws_tools
+my_cmake_env.sh
+ros2_dev_scripts
+ros2_tools
